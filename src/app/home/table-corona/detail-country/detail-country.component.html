@@ -1,0 +1,51 @@
+<div class="uk-card uk-card-default uk-width-1@m" *ngIf="selectedCountry">
+  <div class="uk-card-header">
+    <div class="uk-grid-small uk-flex-middle" uk-grid>
+      <div class="uk-width-auto">
+        <img
+          width="40"
+          height="40"
+          [src]="
+            'https://www.countryflags.io/' +
+            selectedCountry.info.code +
+            '/shiny/32.png'
+          "
+        />
+      </div>
+      <div class="uk-width-expand">
+        <h3 class="uk-card-title uk-margin-remove-bottom">
+          {{ selectedCountry.info.title }}
+        </h3>
+      </div>
+    </div>
+  </div>
+  <div class="uk-card-body">
+    <hr />
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label">Nombre Des Cas :</label>
+      <label class="col-sm-9 col-form-label fc-danger">{{
+        selectedCountry.total_cases | number:'1.0-0'
+      }}</label>
+    </div>
+    <hr />
+    <hr />
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label">Nombre Des Cas :</label>
+      <label class="col-sm-9 col-form-label fc-danger">{{
+        selectedCountry.total_cases | number:'1.0-0'
+      }}</label>
+    </div>
+    <hr />
+    <hr />
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label">Nombre Des Cas :</label>
+      <label class="col-sm-9 col-form-label fc-danger">{{
+        selectedCountry.total_cases  | number:'1.0-0'
+      }}</label>
+    </div>
+    <hr />
+  </div>
+  <div class="uk-card-footer">
+    <a [mat-dialog-close] class="uk-button uk-button-text">Sortir</a>
+  </div>
+</div>

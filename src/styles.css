@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+
+body {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #858796;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+
+}
+/*###############################*/
+/*
+/*      Color : Background
+/*
+/*###############################*/
+
+.bg-active {
+  background-color: #f79400;
+}
+.bg-confirme {
+  background-color: #b90b29;
+}
+.bg-death {
+  background-color: #b90b29;
+}
+.bg-confirme {
+  background-color: #b90b29;
+}
+.bg-confirme {
+  background-color: #b90b29;
+}
+
+.uk-section-primary {
+  background-color: rgb(248, 249, 252);
+  color: #858796 !important;
+}
+
+/*======== Jumbotron ======*/
+.jumbotron {
+  padding-bottom: 11px;
+  padding-top: 6px;
+  width: 26%;
+  margin-top: 25px;
+  background: #4d4aef0a;
+}
+
+.jumbotron h3 {
+  margin: 0;
+
+}
+
+@media only screen and (max-width : 800px) {
+  .jumbotron {
+    width: 100%;
+  }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.h-30 {
+  height: 30px;
+}
+
+.death {
+  background-color: red;
+  color: #fff;
+}
+
+.new-case{
+  background-color: #FFEEAA;
+}
+
+.mat-sort-header-container {
+  justify-content: center;
+}
