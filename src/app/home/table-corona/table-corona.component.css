@@ -5,3 +5,12 @@ table {
 th.mat-sort-header-sorted {
   color: black;
 }
+
+.mat-form-field {
+  width: 100%;
+}
+
+#tableZone hr {
+  margin-top: 60px;
+  margin-bottom: 80px;
+}

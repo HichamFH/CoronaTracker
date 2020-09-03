@@ -1,119 +1,141 @@
+<div id="card">
+  <div class="row mt-4" *ngIf="state">
+    <div class="col-xl-4 col-md-6 mb-4">
+      <div class="card shadow h-100 py-2" style="background-color: #f79400">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div
+                class="text-xs font-weight-bold text-white text-uppercase mb-1"
+              >
+                Total Cases
+              </div>
+              <div class="h1 mb-0 font-weight-bold text-white">
+                {{ state.cases | number: "1.0-0" }}
+              </div>
+            </div>
+            <div class="col-auto">
+              <i class="fas mt-3 fa-bed fa-2x text-white-50"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<div class="jumbotron">
-    <h3>Statistique Globale :</h3>
+    <div class="col-xl-4 col-md-6 mb-4">
+      <div class="card shadow h-100 py-2" style="background-color: #0da785">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div
+                class="text-xs font-weight-bold text-white text-uppercase mb-1"
+              >
+                Total Recovered
+              </div>
+              <div class="h1 mb-0 font-weight-bold text-white">
+                {{ state.recovered | number: "1.0-0" }}
+              </div>
+            </div>
+            <div class="col-auto">
+              <i class="fas mt-3 fa-heart fa-2x text-white-50"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-4 col-md-6 mb-4">
+      <div class="card shadow h-100 py-2" style="background-color: #b90b29">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div
+                class="text-xs font-weight-bold text-white text-uppercase mb-1"
+              >
+                Total Deaths
+              </div>
+              <div class="h1 mb-0 font-weight-bold text-white">
+                {{ state.deaths | number: "1.0-0" }}
+              </div>
+            </div>
+            <div class="col-auto">
+              <i class="fas mt-3 fa-user fa-2x text-white-50"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4" *ngIf="state">
+    <div class="col-xl-4 col-md-6 mb-4">
+      <div class="card shadow h-100 py-2" style="background-color: #1faaff">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div
+                class="text-xs font-weight-bold text-white text-uppercase mb-1"
+              >
+                New Cases
+              </div>
+              <div class="h1 mb-0 font-weight-bold text-white">
+                {{ state.todayCases | number: "1.0-0" }}
+              </div>
+            </div>
+            <div class="col-auto">
+              <i class="fas mt-3 fa-medkit fa-2x text-white-50"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-4 col-md-6 mb-4">
+      <div class="card shadow h-100 py-2" style="background-color: #d35400">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div
+                class="text-xs font-weight-bold text-white text-uppercase mb-1"
+              >
+                New Death
+              </div>
+              <div class="row no-gutters align-items-center">
+                <div class="col-auto">
+                  <div class="h1 mb-0 mr-3 font-weight-bold text-white">
+                    {{ state.todayDeaths | number: "1.0-0" }}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto">
+              <i class="fas mt-3 fa-clipboard-list fa-2x text-white-50"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-4 col-md-6 mb-4 mx-auto">
+      <div class="card shadow h-100 py-2" style="background: #0b73b9">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div
+                class="text-xs font-weight-bold text-white text-uppercase mb-1"
+              >
+                Active Cases
+              </div>
+              <div class="h1 mb-0 font-weight-bold text-white">
+                {{ state.active | number: "1.0-0" }}
+              </div>
+            </div>
+            <div class="col-auto">
+              <i class="fas mt-3 fa-microscope fa-2x text-white-50"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
-
-    <div class="row mt-4" *ngIf='state'>
-
-
-
-
-      <div class="col-xl-4 col-md-6 mb-4">
-        <div class="card shadow h-100 py-2" style="background-color: #f79400">
-              <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                  <div class="col mr-2">
-                    <div class="text-xs font-weight-bold text-white text-uppercase mb-1">Le Nombre Total Des Cas</div>
-                    <div class="h1 mb-0 font-weight-bold text-white ">{{result.total_cases  | number:'1.0-0'}}</div>
-                  </div>
-                  <div class="col-auto">
-                    <i class="fas  mt-3  fa-bed  fa-2x text-white-50"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xl-4 col-md-6 mb-4">
-            <div class="card shadow h-100 py-2" style="background-color: #0da785">
-              <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                  <div class="col mr-2">
-                    <div class="text-xs font-weight-bold text-white text-uppercase mb-1">Guéris</div>
-                    <div class="h1 mb-0 font-weight-bold text-white">{{result.total_recovered  | number:'1.0-0'}}</div>
-                  </div>
-                  <div class="col-auto">
-                    <i class="fas   mt-3 fa-heart fa-2x text-white-50"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xl-4 col-md-6 mb-4">
-            <div class="card  shadow h-100 py-2" style="background-color: #b90b29">
-              <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                  <div class="col mr-2">
-                    <div class="text-xs font-weight-bold text-white text-uppercase mb-1">Décès</div>
-                    <div class="h1 mb-0 font-weight-bold text-white">{{result.total_deaths  | number:'1.0-0'}}</div>
-                  </div>
-                  <div class="col-auto">
-                    <i class="fas  mt-3  fa-user fa-2x text-white-50"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-    </div>
-
-    <div class="row mt-4" *ngIf='state'>
-          <div class="col-xl-4 col-md-6 mb-4">
-            <div class="card shadow h-100 py-2" style="background-color: #1faaff">
-              <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                  <div class="col mr-2">
-                    <div class="text-xs font-weight-bold text-white text-uppercase mb-1">Nouveaux Cas Aujourd'hui</div>
-                    <div class="h1 mb-0 font-weight-bold text-white ">{{result.total_new_cases_today | number:'1.0-0'}}</div>
-                  </div>
-                  <div class="col-auto">
-                    <i class="fas  mt-3  fa-medkit  fa-2x text-white-50"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xl-4 col-md-6 mb-4">
-            <div class="card shadow h-100 py-2" style="background-color:#d35400">
-              <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                  <div class="col mr-2">
-                    <div class="text-xs font-weight-bold text-white text-uppercase mb-1">
-                      Nouveaux Décès Aujourd'hui</div>
-                    <div class="row no-gutters align-items-center">
-                      <div class="col-auto">
-                        <div class="h1 mb-0 mr-3 font-weight-bold text-white">
-
-                        {{result.total_new_deaths_today  | number:'1.0-0'}}</div>
-                      </div>
-
-                    </div>
-                  </div>
-                  <div class="col-auto">
-                    <i class="fas  mt-3  fa-clipboard-list fa-2x text-white-50"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-xl-4 col-md-6 mb-4 mx-auto">
-            <div class="card shadow h-100 py-2 " style="background:#0b73b9">
-              <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                  <div class="col mr-2">
-                    <div class="text-xs font-weight-bold text-white text-uppercase mb-1">Total Des Cas Actif</div>
-                    <div class="h1 mb-0 font-weight-bold text-white">{{result.total_serious_cases  | number:'1.0-0'}}</div>
-                  </div>
-                  <div class="col-auto">
-                    <i class="fas mt-3  fa-microscope fa-2x text-white-50"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-    </div>

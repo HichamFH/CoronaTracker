@@ -1,0 +1,41 @@
+.uk-card img {
+  width: 36%;
+  margin-bottom: 20px;
+}
+
+.uk-card h3 {
+  margin: 0;
+  padding-top: 5px;
+  font-family: "Amiri", serif;
+  font-weight: 400;
+}
+
+#mapa-mapbox {
+  width: 100%;
+  height: 450px;
+}
+
+.uk-card {
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/*======= Card =====*/
+.container .row .card {
+  margin-top: -15px;
+  z-index: 20;
+  padding-bottom: 20px;
+}
+
+.detail-cases {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-icon {
+  width: 50px;
+}

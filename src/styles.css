@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;1,700&family=Roboto:wght@100;300;400&display=swap');
 
 body {
   font-size: 1rem;
@@ -75,4 +74,56 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .mat-sort-header-container {
   justify-content: center;
+}
+
+/*************************************/
+/*      Framework                     /
+/************************************/
+
+.mt-50{
+  margin-top: 50px;
+}
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+#footer .social {
+  padding-bottom: 20px;
+}
+
+.deathBg{
+  margin: 0;
+  color: #e67e22;
+  font-family: 'Amiri', serif;
+  font-weight: 400;
+  padding-left: 70px;
+}
+.recoveredBg {
+  color: #3498db;
+  margin: 0;
+    font-family: 'Amiri', serif;
+  font-weight: 400;
+
+}
+
+.ft-p {
+  font-size: 14px;
+  color: #000000;
+}
+
+.my-hr  {
+  border-right: 1px solid #4040402e;
+}
+
+/***************************************/
+/*
+/*      Media Query
+/*
+/*****************************************/
+
+@media screen and (max-width: 768px) {
+  .my-hr {
+    border-right: none;
+    border-bottom: 1px solid #4040402e;
+  }
 }

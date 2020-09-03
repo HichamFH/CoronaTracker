@@ -11,19 +11,19 @@ export class CoronaService {
   //======== Get All =======//
 
   getAll() {
-    return this.http.get('https://api.thevirustracker.com/free-api?countryTotals=ALL');
+    return this.http.get('https://corona.lmao.ninja/v2/countries');
   }
 
     //========== Total Cases ========//
 
     stateAll() {
-      return this.http.get("https://api.thevirustracker.com/free-api?global=stats");
+      return this.http.get("https://corona.lmao.ninja/v2/all");
     }
 
     //====== Get Data By Code =======//
 
     getByCode(code) {
-      return this.http.get("https://api.thevirustracker.com/free-api?countryTotal="+code)
+      return this.http.get("https://corona.lmao.ninja/v2/countries/"+code)
     }
 
 

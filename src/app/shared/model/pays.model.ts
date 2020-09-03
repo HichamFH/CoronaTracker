@@ -1,15 +1,35 @@
 export class Pays {
 
-    ourid : number;
-    title : string;
-    code : string;
-    total_cases: number;
-    total_recovered: number;
-    total_unresolved: number;
-    total_deaths: number;
-    total_new_cases_today: number;
-    total_new_deaths_today: number;
-    total_active_cases: number;
-    total_serious_cases: number;
+  updated: number;
+  country: string;
+  countryInfo: {
+    _id: number,
+    iso2: string,
+    iso3: string,
+    lat: number,
+    long: number,
+    flag: string
+};
+  cases: number;
+  todayCases: number;
+  deaths: number;
+  todayDeaths: number;
+  recovered: number;
+  continent : string;
+  todayRecovered: number;
+  active: number;
+  critical: number;
+  casesPerOneMillion: number;
+  deathsPerOneMillion: number;
+  tests: number;
+  testsPerOneMillion: number;
+  population: number;
+  oneCasePerPeople: number;
+  oneDeathPerPeople: number;
+  oneTestPerPeople: number;
+  activePerOneMillion: number;
+  recoveredPerOneMillion: number;
+  criticalPerOneMillion: number;
+  affectedCountries: number;
 
 }

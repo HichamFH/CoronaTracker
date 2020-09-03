@@ -1,3 +1,8 @@
 .py-2 {
   padding-bottom: 1.5rem!important;
 }
+
+#card {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}

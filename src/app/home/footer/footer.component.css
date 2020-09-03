@@ -1,0 +1,22 @@
+#footer hr{
+  width: 100%;
+  margin-top: 50px;
+}
+#footer .imgZone {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+}
+
+#footer .social {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}

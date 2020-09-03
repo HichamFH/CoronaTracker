@@ -1,0 +1,130 @@
+<div class="container">
+  <div class="row">
+    <div class="uk-card uk-card-default uk-card-body">
+      <div class="col-sm-12 col-md-12 col-xl-5" *ngIf="data">
+        <img src="{{ data.countryInfo.flag }}" />
+        <hr />
+        <h3>
+          Pays : <b>{{ data.country }}</b>
+        </h3>
+        <hr />
+        <h3>
+          Population : <b> {{ data.population | number: "1.0-0" }}</b>
+        </h3>
+        <hr />
+        <h3>
+          Continent : <b> {{ data.continent }}</b>
+        </h3>
+      </div>
+      <div class="col-sm-12 col-md-12 col-xl-7">
+        <div id="mapa-mapbox"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row card-s">
+    <div class="col-xl-4 col-md-6 mb-4" *ngIf="data">
+      <div class="card shadow h-100 py-2" style="background-color: #1faaff9e">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div
+                class="text-xs font-weight-bold text-white text-uppercase mb-1"
+              >
+                Total Cases
+              </div>
+              <div class="row no-gutters align-items-center">
+                <div class="col-auto">
+                  <div class="h2 mb-0 mr-3 font-weight-bold text-white">
+                    {{ data.cases | number: "1.0-0" }}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto">
+              <i class="fas mt-3 fa-clipboard-list fa-2x text-white-50"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-4 col-md-6 mb-4" *ngIf="data">
+      <div class="card shadow h-100 py-2" style="background-color: #0da785a3">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div
+                class="text-xs font-weight-bold text-white text-uppercase mb-1"
+              >
+                Total Recovered
+              </div>
+              <div class="row no-gutters align-items-center">
+                <div class="col-auto">
+                  <div class="h2 mb-0 mr-3 font-weight-bold text-white">
+                    {{ data.recovered | number: "1.0-0" }}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto">
+              <i class="fas mt-3 fa-clipboard-list fa-2x text-white-50"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-4 col-md-6 mb-4" *ngIf="data">
+      <div class="card shadow h-100 py-2" style="background-color: #d354009e">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div
+                class="text-xs font-weight-bold text-white text-uppercase mb-1"
+              >
+                Total Death
+              </div>
+              <div class="row no-gutters align-items-center">
+                <div class="col-auto">
+                  <div class="h2 mb-0 mr-3 font-weight-bold text-white">
+                    {{ data.deaths | number: "1.0-0" }}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto">
+              <i class="fas mt-3 fa-clipboard-list fa-2x text-white-50"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xm-12 col-md-6 col-xl-6">
+      <app-closed-case-card
+        [formatted_date]="formatted_date"
+        [pays]="data"
+        [closedCase]="closedCase"
+        [recoveredPercentage]="recoveredPercentage"
+        [deathsPercentage]="deathsPercentage"
+      ></app-closed-case-card>
+    </div>
+    <div class="col-xm-12 col-md-6 col-xl-6">
+      <app-active-cases
+        [formatted_date]="formatted_date"
+        [mildCondition]="mildCondition"
+        [pays]="data"
+        [inMildConditionPercentage]="inMildConditionPercentage"
+        [criticalPercentage]="criticalPercentage"
+      ></app-active-cases>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xm-12 col-md-12 col-xl-12">
+      <app-new-case
+        [pays]="data"
+        [formatted_date]="formatted_date"
+      ></app-new-case>
+    </div>
+  </div>
+</div>

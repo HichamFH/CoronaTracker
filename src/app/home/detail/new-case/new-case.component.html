@@ -1,0 +1,55 @@
+<div class="new-case-detail" *ngIf="pays.todayCases > 0">
+  <div class="uk-card uk-card-default">
+    <div class="uk-card-header">
+      <div class="uk-grid-small uk-flex-middle" uk-grid>
+        <div class="uk-width-auto">
+          <img
+            style="width: 50px"
+            src="../../../../assets/images/new.svg"
+            alt=""
+          />
+        </div>
+        <div class="uk-width-expand">
+          <h3 class="uk-card-title uk-margin-remove-bottom">
+            New Case In Last 24H
+          </h3>
+          <p class="uk-text-meta uk-margin-remove-top">
+            {{ formatted_date }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="uk-card-body" *ngIf="pays">
+      <div class="row today-cases">
+        <div class="col-xm-12 col-md-4 col-xl-4 my-hr">
+          <div class="box">
+            <span uk-icon="icon: plus; ratio: 2.2"></span>
+            <h3>
+              <b>{{ pays.todayCases | number: "1.0-0" }}</b>
+            </h3>
+            <p>New Cases</p>
+          </div>
+        </div>
+        <div class="col-xm-12 col-md-4 col-xl-4 my-hr">
+          <div class="box">
+            <span uk-icon="icon: heart; ratio: 2.2"></span>
+            <h3>
+              <b>{{ pays.todayRecovered | number: "1.0-0" }}</b>
+            </h3>
+            <p>New Recovered</p>
+          </div>
+        </div>
+        <div class="col-xm-12 col-md-4 col-xl-4">
+          <div class="box">
+            <span uk-icon="icon: warning; ratio: 2.2"></span>
+
+            <h3>
+              <b>{{ pays.todayDeaths | number: "1.0-0" }}</b>
+            </h3>
+            <p>New Deaths</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

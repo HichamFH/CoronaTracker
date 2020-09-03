@@ -17,6 +17,17 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import {MatDialogModule} from '@angular/material/dialog';
 import { DetailCountryComponent } from './home/table-corona/detail-country/detail-country.component';
 
+import { FooterComponent } from './home/footer/footer.component';
+import { DetailComponent } from './home/detail/detail.component';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { ClosedCaseCardComponent } from './home/detail/closed-case-card/closed-case-card.component';
+import { ActiveCasesComponent } from './home/detail/active-cases/active-cases.component';
+import { NewCaseComponent } from './home/detail/new-case/new-case.component';
+
+
+
+
 
 
 @NgModule({
@@ -25,7 +36,13 @@ import { DetailCountryComponent } from './home/table-corona/detail-country/detai
     HomeComponent,
     TableCoronaComponent,
     CardStateComponent,
-    DetailCountryComponent
+    DetailCountryComponent,
+    FooterComponent,
+    DetailComponent,
+    ClosedCaseCardComponent,
+    ActiveCasesComponent,
+    NewCaseComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -38,10 +55,13 @@ import { DetailCountryComponent } from './home/table-corona/detail-country/detai
     MatSortModule,
     MatFormFieldModule,
     MatInputModule,
-    MatDialogModule
+    MatDialogModule,
+    NgxSpinnerModule
 
   ],
-  providers: [],
+  providers: [
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
+  ],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

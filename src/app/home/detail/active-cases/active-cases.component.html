@@ -1,0 +1,48 @@
+<div class="active-case">
+  <div class="uk-card uk-card-default">
+    <div class="uk-card-header">
+      <div class="uk-grid-small uk-flex-middle" uk-grid>
+        <div class="uk-width-auto">
+          <img
+            style="width: 50px"
+            src="../../../../assets/images/arrow.svg"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="uk-width-expand">
+          <h3 class="uk-card-title uk-margin-remove-bottom">Active Case</h3>
+          <p class="uk-text-meta uk-margin-remove-top">
+            {{ formatted_date }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="uk-card-body" *ngIf="pays">
+      <h3>
+        <b>{{ pays.active | number: "1.0-0" }}</b>
+      </h3>
+      <p>Currently Infected Patients</p>
+    </div>
+    <div class="uk-card-footer">
+      <div class="col-sm-12 col-md-6 col-xl-6" *ngIf="pays">
+        <h3 class="recoveredBg">
+          <b>{{ mildCondition | number: "1.0-0" }}</b>
+          <strong class="ft-p">
+            ( {{ inMildConditionPercentage.toFixed(1) }}%)
+          </strong>
+        </h3>
+        <p class="recoveredBg">in Mild Condition</p>
+      </div>
+      <div class="col-sm-12 col-md-6 col-xl-6" *ngIf="pays">
+        <h3 class="deathBg">
+          <b>{{ pays.critical | number: "1.0-0" }} </b>
+          <strong class="ft-p">
+            ( {{ criticalPercentage.toFixed(1) }}%)
+          </strong>
+        </h3>
+        <p class="deathBg">Critical</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+.active-case{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-family: 'Amiri', serif;
+    font-weight: 400;
+}
+
+.uk-card-title {
+  margin: 0;
+  padding-top: 5px;
+
+}
+
+.uk-card-title .fa {
+  font-size: 30px;
+}
+
+.uk-card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.uk-card-body h3 {
+  font-size: 35px;
+  font-family: 'Amiri', serif;
+  font-weight: 400;
+  color: #404040;
+    margin: 0;
+}
+.uk-card-body p{
+  margin: 0;
+}
+.uk-card-default {
+  width: 100%;
+}
+.uk-card-footer{
+  display: flex;
+}
+
